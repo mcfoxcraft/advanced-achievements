@@ -72,7 +72,7 @@ public class MaterialHelper {
 		if (itemStack.getType() != Material.POTION) {
 			return false;
 		}
-		return ((PotionMeta) itemStack.getItemMeta()).getBasePotionData().getType() != PotionType.WATER;
+		return ((PotionMeta) itemStack.getItemMeta()).getBasePotionType() != PotionType.WATER;
 	}
 
 }
