@@ -25,7 +25,7 @@ class MaterialHelperTest {
 
 	@Test
 	void shouldReturnFalseForWaterPotion() {
-		when(potionMeta.getBasePotionData()).thenReturn(new PotionData(PotionType.WATER));
+		when(potionMeta.getBasePotionType()).thenReturn(PotionType.WATER);
 		when(itemStack.getItemMeta()).thenReturn(potionMeta);
 		when(itemStack.getType()).thenReturn(Material.POTION);
 		MaterialHelper underTest = new MaterialHelper(null);
@@ -35,7 +35,7 @@ class MaterialHelperTest {
 
 	@Test
 	void shouldReturnTrueForOtherPotion() {
-		when(potionMeta.getBasePotionData()).thenReturn(new PotionData(PotionType.HARMING));
+		when(potionMeta.getBasePotionType()).thenReturn(PotionType.HARMING);
 		when(itemStack.getItemMeta()).thenReturn(potionMeta);
 		when(itemStack.getType()).thenReturn(Material.POTION);
 		MaterialHelper underTest = new MaterialHelper(null);
